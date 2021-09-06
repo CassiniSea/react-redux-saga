@@ -3,12 +3,12 @@ import {connect} from "react-redux";
 import {getPostsAsync} from "./store/posts/actions";
 
 const Posts = ({dispatch, posts}) => {
-
     useEffect(() => {
         dispatch(getPostsAsync())
     }, [dispatch])
 
     return <>
+        <h1>Posts</h1>
         {posts.map((post, index) => (
             <div className="card" key={index}>
                 <div className="card-body">
